@@ -37,6 +37,30 @@ p, a, h3, h4, h5, h6 {
 .gallery-container {
   display: flex;
   justify-content: center; 
+  
+}
+
+.container {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+#item-one {
+  order: 1;
+}
+
+#item-two{
+  order: 2;
 }
 
 .button {
@@ -75,5 +99,32 @@ p, a, h3, h4, h5, h6 {
   max-width: 80%;
   align-items: center;
   flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
 }
 
+
+/* below uses flexbox help and learnings from website 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  text-align: center; 
+  align-items: center;
+}
+
+.flex-one {
+  text-align: center;
+  order: 1;
+}
+
+.flex-two {
+  order: 2; 
+  padding: 40px;
+}
+
+@media all and (min-width: 600px) {
+  .flex-two { flex: 1 0 0; }
+}
